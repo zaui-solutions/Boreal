@@ -487,15 +487,6 @@
             line-height: 1;
             top: 0.1em;
         }
-        .ai-loading-spinner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            font-style: italic;
-            color: #94a3b8;
-            font-size: 1.1rem;
-        }
         /* Loading Overlay Styles */
         #loadingOverlay {
             position: fixed;
@@ -504,7 +495,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.9);
-            display: flex;
+            display: none; /* Changed from flex to none */
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -514,6 +505,7 @@
             transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         }
         #loadingOverlay.show {
+            display: flex; /* Changed from block to flex */
             opacity: 1;
             visibility: visible;
         }
@@ -549,6 +541,7 @@
         }
         .fixed-cta-button:active {
             transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .fixed-cta-button .lottie-icon {
             width: 30px;
@@ -690,30 +683,30 @@
                         This page is your comprehensive resource for understanding the powerful partnership between Boreal and Zaui. Explore various aspects of our collaboration and discover how Zaui drives success in the transportation industry.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="zaui-clients-transportation">
+                        <a href="#zaui-clients-transportation" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Client Examples</h4>
                             <p class="text-gray-500 text-sm">See how similar companies have succeeded with Zaui.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="quantifiable-impact-transportation">
+                        </a>
+                        <a href="#quantifiable-impact-transportation" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Quantifiable Impact</h4>
                             <p class="text-gray-500 text-sm">Dive into key performance indicators and proven results from Zaui clients, with AI-powered insights tailored for Boreal.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="revenue-section-transportation">
+                        </a>
+                        <a href="#revenue-section-transportation" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Revenue Potential</h4>
                             <p class="text-gray-500 text-sm">Explore how Zaui helps maximize revenue through dynamic pricing, expanded sales channels, and efficient booking.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="efficiency-section-transportation">
+                        </a>
+                        <a href="#efficiency-section-transportation" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Operational Efficiency</h4>
                             <p class="text-gray-500 text-sm">Learn about automation, streamlined check-ins, and resource management features that save time and reduce overhead.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="case-studies-transportation">
+                        </a>
+                        <a href="#case-studies-transportation" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Case Studies & Blogs</h4>
-                            <p class="text-gray-500 text-sm">Read in-depth analyses of successful client stories and insightful articles on industry trends, with AI summarization.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="webinars-ebooks-transportation">
+                            <p class="text-gray-500 text-sm">Read in-depth analyses of successful client stories and insightful articles on industry trends.</p>
+                        </a>
+                        <a href="#webinars-ebooks-transportation" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Webinars & E-books</h4>
-                            <p class="text-gray-500 text-sm">Access valuable educational content, including expert webinars and comprehensive e-books, to deepen your understanding.</p>
-                        </div>
+                            <p class="text-gray-500 text-sm">Access valuable educational content to deepen your understanding.</p>
+                        </a>
                     </div>
                 </section>
 
@@ -722,7 +715,7 @@
                     <h3 class="text-2xl sm:text-3xl font-semibold mb-6 text-blue-600 border-b border-blue-400 pb-2">
                         Our Valued Clients
                     </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                         <div class="client-card">
                             <img src="https://placehold.co/120x60/ffffff/1f2937?text=Vegas+Airporter" alt="Vegas Airporter Logo">
                             <h4 class="text-blue-500">Vegas Airporter</h4>
@@ -763,102 +756,102 @@
                         <!-- Overall Zaui Impact -->
                         <h3 class="impact-category-title text-blue-600">Overall Zaui Impact</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-                            <div class="impact-tile" data-impact-type="overall-experience" data-value="25 Years" data-description="Experience (since 1999, 1000s of operators)">
+                            <div class="impact-tile" data-insight-id="transportation-overall-experience" data-value="25 Years" data-description="Experience (since 1999, 1000s of operators)">
                                 <p class="value">25 Years</p>
                                 <p class="description">Experience (since 1999, 1000s of operators)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="overall-growth" data-value="14%" data-description="YoY Growth for Average Customer">
+                            <div class="impact-tile" data-insight-id="transportation-overall-growth" data-value="14%" data-description="YoY Growth for Average Customer">
                                 <p class="value">14%</p>
                                 <p class="description">YoY Growth for Average Customer</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                         <!-- Drive More Revenue -->
                         <h3 class="impact-category-title text-blue-600">Drive More Revenue</h3>
                         <div class="impact-grid-container mb-12">
-                            <div class="impact-tile" data-impact-type="revenue-275-lifetime" data-value="275%" data-description="Business Growth Over Time (long-term users)">
+                            <div class="impact-tile" data-insight-id="transportation-revenue-lifetime" data-value="275%" data-description="Business Growth Over Time (long-term users)">
                                 <p class="value">275%</p>
                                 <p class="description">Business Growth Over Time (long-term users)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="revenue-20-peak" data-value="20%" data-description="Revenue Increase in Peak Season (Dynamic Pricing)">
+                            <div class="impact-tile" data-insight-id="transportation-revenue-peak" data-value="20%" data-description="Revenue Increase in Peak Season (Dynamic Pricing)">
                                 <p class="value">20%</p>
                                 <p class="description">Revenue Increase in Peak Season (Dynamic Pricing)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="channels-30-agents" data-value="30%" data-description="More Bookings through Agents & Resellers">
+                            <div class="impact-tile" data-insight-id="transportation-channels-agents" data-value="30%" data-description="More Bookings through Agents & Resellers">
                                 <p class="value">30%</p>
                                 <p class="description">More Bookings through Agents & Resellers</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="channels-global-reach" data-value="Global Reach" data-description="with Viator, Expedia, Google & more">
+                            <div class="impact-tile" data-insight-id="transportation-channels-global" data-value="Global Reach" data-description="with Viator, Expedia, Google & more">
                                 <p class="value">Global Reach</p>
                                 <p class="description">with Viator, Expedia, Google & more</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="channels-no-overbookings" data-value="No More" data-description="Overbookings (Real-time Inventory Sync)">
+                            <div class="impact-tile" data-insight-id="transportation-channels-no-overbookings" data-value="No More" data-description="Overbookings (Real-time Inventory Sync)">
                                 <p class="value">No More</p>
                                 <p class="description">Overbookings (Real-time Inventory Sync)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="channels-multiple-brands" data-value="Multiple Brands" data-description="or Locations from One System">
+                            <div class="impact-tile" data-insight-id="transportation-channels-brands" data-value="Multiple Brands" data-description="or Locations from One System">
                                 <p class="value">Multiple Brands</p>
                                 <p class="description">or Locations from One System</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                         <!-- Streamline Operations & Save on Overhead -->
                         <h3 class="impact-category-title text-blue-600">Streamline Operations & Save on Overhead</h3>
                         <div class="impact-grid-container mb-12">
-                            <div class="impact-tile" data-impact-type="operations-75-workload" data-value="75%" data-description="Reduction in Office Workload">
+                            <div class="impact-tile" data-insight-id="transportation-operations-workload" data-value="75%" data-description="Reduction in Office Workload">
                                 <p class="value">75%</p>
                                 <p class="description">Reduction in Office Workload</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="operations-grow-without-staff" data-value="Grow Bookings" data-description="Without Growing Staff">
+                            <div class="impact-tile" data-insight-id="transportation-operations-grow-without-staff" data-value="Grow Bookings" data-description="Without Growing Staff">
                                 <p class="value">Grow Bookings</p>
                                 <p class="description">Without Growing Staff</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="operations-speed-checkin" data-value="Speed Up" data-description="Boarding and Check-in">
+                            <div class="impact-tile" data-insight-id="transportation-operations-speed-checkin" data-value="Speed Up" data-description="Boarding and Check-in">
                                 <p class="value">Speed Up</p>
                                 <p class="description">Boarding and Check-in</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="operations-consolidate-tools" data-value="Consolidate Tools" data-description="Reduce Software Spend">
+                            <div class="impact-tile" data-insight-id="transportation-operations-consolidate" data-value="Consolidate Tools" data-description="Reduce Software Spend">
                                 <p class="value">Consolidate Tools</p>
                                 <p class="description">Reduce Software Spend</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                         <!-- Create a Seamless Experience for Guests -->
                         <h3 class="impact-category-title text-blue-600">Create a Seamless Experience for Guests</h3>
                         <div class="impact-grid-container">
-                            <div class="impact-tile" data-impact-type="guest-50-online" data-value="Shift 50%" data-description="of Bookings Online">
+                            <div class="impact-tile" data-insight-id="transportation-guest-online" data-value="Shift 50%" data-description="of Bookings Online">
                                 <p class="value">Shift 50%</p>
                                 <p class="description">of Bookings Online</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-10x-reviews" data-value="10x More" data-description="Guest Reviews">
+                            <div class="impact-tile" data-insight-id="transportation-guest-reviews" data-value="10x More" data-description="Guest Reviews">
                                 <p class="value">10x More</p>
                                 <p class="description">Guest Reviews</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-sell-24-7" data-value="Sell 24/7" data-description="Even While You Sleep">
+                            <div class="impact-tile" data-insight-id="transportation-guest-sell-24-7" data-value="Sell 24/7" data-description="Even While You Sleep">
                                 <p class="value">Sell 24/7</p>
                                 <p class="description">Even While You Sleep</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-fewer-abandoned" data-value="Fewer Abandoned" data-description="Carts, More Confirmed Bookings">
+                            <div class="impact-tile" data-insight-id="transportation-guest-fewer-abandoned" data-value="Fewer Abandoned" data-description="Carts, More Confirmed Bookings">
                                 <p class="value">Fewer Abandoned</p>
                                 <p class="description">Carts, More Confirmed Bookings</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-5-star-repeat" data-value="Earn More" data-description="5-Star Reviews & Repeat Business">
+                            <div class="impact-tile" data-insight-id="transportation-guest-repeat" data-value="Earn More" data-description="5-Star Reviews & Repeat Business">
                                 <p class="value">Earn More</p>
                                 <p class="description">5-Star Reviews & Repeat Business</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                     </div>
@@ -896,8 +889,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-12">
-                            <button id="revenueInsightBtn-transportation" class="cta-button text-base px-6 py-3">
-                                Get AI Insight on Revenue
+                            <button class="cta-button text-base px-6 py-3" data-insight-id="transportation-revenue-insight">
+                                Show Insight on Revenue
                                 <div id="lottie-ai-brain-small-revenue-transportation" class="lottie-animation-container w-8 h-8"></div>
                             </button>
                         </div>
@@ -936,8 +929,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-12">
-                            <button id="efficiencyInsightBtn-transportation" class="cta-button text-base px-6 py-3">
-                                Get AI Insight on Efficiency
+                            <button class="cta-button text-base px-6 py-3" data-insight-id="transportation-efficiency-insight">
+                                Show Insight on Efficiency
                                 <div id="lottie-ai-brain-small-efficiency-transportation" class="lottie-animation-container w-8 h-8"></div>
                             </button>
                         </div>
@@ -976,8 +969,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-12">
-                            <button id="cxInsightBtn-transportation" class="cta-button text-base px-6 py-3">
-                                Get AI Insight on Customer Experience
+                            <button class="cta-button text-base px-6 py-3" data-insight-id="transportation-cx-insight">
+                                Show Insight on Customer Experience
                                 <div id="lottie-ai-brain-small-cx-transportation" class="lottie-animation-container w-8 h-8"></div>
                             </button>
                         </div>
@@ -994,10 +987,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Vegas Airporter: How Vegas Airporter Revolutionizes Shuttle Services with Zaui</h4>
                             <p class="text-gray-500 text-sm mb-3">Discover how Vegas Airporter transformed their shuttle services, enhancing efficiency and customer satisfaction.</p>
                             <a href="https://www.zaui.com/blog/shuttle-scheduling-software-case-study/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-transportation mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="Vegas Airporter: Revolutionizing Shuttle Services"
-                                    data-snippet="Vegas Airporter revolutionized shuttle services by implementing Zaui's advanced scheduling and booking software. This led to significant improvements in route optimization, real-time vehicle tracking, and seamless passenger management. The result was a noticeable increase in operational efficiency, a reduction in manual errors, and enhanced customer satisfaction due to reliable and timely service. Boreal could leverage similar scheduling and tracking features to optimize their bus and ferry routes, reduce idle times, and provide real-time updates to passengers, leading to improved service reliability and customer loyalty.">
-                                ✨ AI Insight for Boreal
+                                    data-insight-id="case-study-transportation-vegas">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Case Study 2 -->
@@ -1005,10 +998,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Galveston Express: Mission Critical | The Gap in Galveston</h4>
                             <p class="text-gray-500 text-sm mb-3">Explore how Galveston Express addressed critical operational gaps with Zaui's robust solutions.</p>
                             <a href="https://www.zaui.com/blog/tourism-case-study-galveston-express/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-transportation mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="Galveston Express: Mission Critical"
-                                    data-snippet="Galveston Express faced critical operational gaps, particularly in managing high seasonal demand and optimizing resource allocation. Zaui provided a scalable booking platform that integrated seamlessly with their existing systems, allowing them to handle increased booking volumes without bottlenecks. This also improved their ability to dynamically assign vehicles and drivers based on real-time demand. For Boreal, this means adopting a flexible and scalable booking system that can easily adapt to fluctuating passenger numbers during peak travel seasons or special events, ensuring smooth operations for their buses, ferries, and tourist coaches and preventing service disruptions.">
-                                ✨ AI Insight for Boreal
+                                    data-insight-id="case-study-transportation-galveston">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Case Study 3 -->
@@ -1016,10 +1009,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Fairview Limousine: Dynamic Pricing to increase Revenue by 20%</h4>
                             <p class="text-gray-500 text-sm mb-3">See how Fairview Limousine achieved a 20% revenue increase using dynamic pricing strategies powered by Zaui.</p>
                             <a href="https://www.zaui.com/blog/case-study-dynamic-pricing-success-with-fairview-limo/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-transportation mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="Fairview Limousine: Dynamic Pricing Success"
-                                    data-snippet="Fairview Limousine successfully implemented Zaui's dynamic pricing module, leading to a 20% increase in revenue. By analyzing demand patterns, time of day, and special events, the system automatically adjusted pricing to maximize profitability while remaining competitive. This allowed them to capture higher revenue during peak times and stimulate demand during off-peak periods. Boreal can adopt dynamic pricing to optimize ticket prices based on factors like route popularity, time of travel, and booking lead time, thereby maximizing revenue per seat and improving overall profitability.">
-                                ✨ AI Insight for Boreal
+                                    data-insight-id="case-study-transportation-fairview">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Case Study 4 -->
@@ -1027,10 +1020,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">IceWalks Tours: Diversified Sales Channels with Zaui</h4>
                             <p class="text-gray-500 text-sm mb-3">Understand how IceWalks Tours expanded their reach and sales by diversifying channels with Zaui software.</p>
                             <a href="https://www.zaui.com/blog/zaui-reservation-software-customer-story-icewalks/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-transportation mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="IceWalks Tours: Diversifying Sales Channels"
-                                    data-snippet="IceWalks Tours significantly expanded their customer reach and sales by leveraging Zaui's ability to integrate with multiple sales channels, including online travel agencies (OTAs), direct website bookings, and agent portals. This multi-channel approach ensured their tours were visible to a wider audience and streamlined the booking process across all platforms. Boreal could utilize Zaui's distribution capabilities to sell tickets for its public and tourist services through various online platforms, travel agents, and even directly on their website, ensuring maximum exposure and convenience for passengers, ultimately leading to increased ticket sales.">
-                                ✨ AI Insight for Boreal
+                                    data-insight-id="case-study-transportation-icewalks">
+                                Show Insight
                             </button>
                         </div>
                     </div>
@@ -1078,10 +1071,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Comprehensive Guide to Managing Service Disruptions for Transport Operators</h4>
                             <p class="text-gray-500 text-sm mb-3">Essential strategies for transport operators to effectively manage and mitigate service disruptions.</p>
                             <a href="https://www.zaui.com/blog/guide-to-managing-service-disruptions-comprehensive-guide-to-managing-service-disruptions-for-transport-operators/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm mt-4">Read Article &rarr;</a>
-                            <button class="summarize-blog-btn-transportation mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="summarize-blog-btn"
                                     data-title="Comprehensive Guide to Managing Service Disruptions for Transport Operators"
-                                    data-snippet="Essential strategies for transport operators to effectively manage and mitigate service disruptions.">
-                                🧠 Summarize with AI
+                                    data-insight-id="blog-transportation-disruptions">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Blog Post 2 -->
@@ -1089,10 +1082,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">What to Look for in a Travel Booking Software in 2025</h4>
                             <p class="text-gray-500 text-sm mb-3">Key considerations and features to prioritize when choosing a travel booking software in the coming year.</p>
                             <a href="https://www.zaui.com/blog/what-to-look-for-in-a-travel-booking-software-in-2025/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm mt-4">Read Article &rarr;</a>
-                            <button class="summarize-blog-btn-transportation mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="summarize-blog-btn"
                                     data-title="What to Look for in a Travel Booking Software in 2025"
-                                    data-snippet="Key considerations and features to prioritize when choosing a travel booking software in the coming year.">
-                                🧠 Summarize with AI
+                                    data-insight-id="blog-transportation-booking-software">
+                                Show Insight
                             </button>
                         </div>
                     </div>
@@ -1108,39 +1101,39 @@
                         This page is your comprehensive resource for understanding the power of Zaui for tours and activities. Explore various aspects of our platform and discover how Zaui drives success for operators like you.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="zaui-clients-tours">
+                        <a href="#zaui-clients-tours" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Client Examples</h4>
                             <p class="text-gray-500 text-sm">See how similar companies have succeeded with Zaui.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="quantifiable-impact-tours">
+                        </a>
+                        <a href="#quantifiable-impact-tours" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Quantifiable Impact</h4>
                             <p class="text-gray-500 text-sm">Dive into key performance indicators and proven results from Zaui clients, with AI-powered insights tailored for tour operators.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="revenue-section-tours">
+                        </a>
+                        <a href="#revenue-section-tours" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Revenue Potential</h4>
                             <p class="text-gray-500 text-sm">Explore how Zaui helps maximize revenue through dynamic pricing, expanded sales channels, and efficient booking.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="efficiency-section-tours">
+                        </a>
+                        <a href="#efficiency-section-tours" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Operational Efficiency</h4>
                             <p class="text-gray-500 text-sm">Learn about automation, streamlined check-ins, and resource management features that save time and reduce overhead.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="case-studies-tours">
+                        </a>
+                        <a href="#case-studies-tours" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Case Studies & Blogs</h4>
-                            <p class="text-gray-500 text-sm">Read in-depth analyses of successful client stories and insightful articles on industry trends, with AI summarization.</p>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105" data-target="webinars-ebooks-tours">
+                            <p class="text-gray-500 text-sm">Read in-depth analyses of successful client stories and insightful articles on industry trends.</p>
+                        </a>
+                        <a href="#webinars-ebooks-tours" class="bg-gray-100 rounded-lg p-4 shadow-md cursor-pointer transition-all duration-300 transform hover:scale-105">
                             <h4 class="text-xl font-semibold text-blue-500 mb-2">Webinars & E-books</h4>
-                            <p class="text-gray-500 text-sm">Access valuable educational content, including expert webinars and comprehensive e-books, to deepen your understanding.</p>
-                        </div>
+                            <p class="text-gray-500 text-sm">Access valuable educational content to deepen your understanding.</p>
+                        </a>
                     </div>
                 </section>
-                
+
                 <!-- Our Valued Clients Section (Tours) -->
                 <section id="zaui-clients-tours" class="content-section">
                     <h3 class="text-2xl sm:text-3xl font-semibold mb-6 text-blue-600 border-b border-blue-400 pb-2">
                         Our Valued Clients
                     </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                         <div class="client-card">
                             <img src="https://placehold.co/120x60/ffffff/1f2937?text=Orca+Spirit" alt="Orca Spirit Adventures Logo">
                             <h4 class="text-blue-500">Orca Spirit Adventures</h4>
@@ -1183,116 +1176,116 @@
                         <!-- Overall Zaui Impact -->
                         <h3 class="impact-category-title text-blue-600">Overall Zaui Impact</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-                            <div class="impact-tile" data-impact-type="tour-experience" data-value="25 Years" data-description="Experience (since 1999, 1000s of operators)">
+                            <div class="impact-tile" data-insight-id="tours-overall-experience" data-value="25 Years" data-description="Experience (since 1999, 1000s of operators)">
                                 <p class="value">25 Years</p>
                                 <p class="description">Experience (since 1999, 1000s of operators)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="tour-growth" data-value="14%" data-description="YoY Growth for Average Customer">
+                            <div class="impact-tile" data-insight-id="tours-overall-growth" data-value="14%" data-description="YoY Growth for Average Customer">
                                 <p class="value">14%</p>
                                 <p class="description">YoY Growth for Average Customer</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                         <!-- Drive More Revenue -->
                         <h3 class="impact-category-title text-blue-600">Drive More Revenue</h3>
                         <div class="impact-grid-container mb-12">
-                            <div class="impact-tile" data-impact-type="revenue-tour-lifetime" data-value="275%" data-description="Business Growth Over Time (long-term users)">
+                            <div class="impact-tile" data-insight-id="tours-revenue-lifetime" data-value="275%" data-description="Business Growth Over Time (long-term users)">
                                 <p class="value">275%</p>
                                 <p class="description">Business Growth Over Time (long-term users)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="revenue-peak-season" data-value="20%" data-description="Revenue Increase in Peak Season (Dynamic Pricing)">
+                            <div class="impact-tile" data-insight-id="tours-revenue-peak" data-value="20%" data-description="Revenue Increase in Peak Season (Dynamic Pricing)">
                                 <p class="value">20%</p>
                                 <p class="description">Revenue Increase in Peak Season (Dynamic Pricing)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="revenue-online-sales" data-value="Increase Online" data-description="Sales with a Seamless Checkout">
+                            <div class="impact-tile" data-insight-id="tours-revenue-online-sales" data-value="Increase Online" data-description="Sales with a Seamless Checkout">
                                 <p class="value">Increase Online</p>
                                 <p class="description">Sales with a Seamless Checkout</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="revenue-upsells" data-value="Boost AOV" data-description="with Add-ons & Upsells">
+                            <div class="impact-tile" data-insight-id="tours-revenue-upsells" data-value="Boost AOV" data-description="with Add-ons & Upsells">
                                 <p class="value">Boost AOV</p>
                                 <p class="description">with Add-ons & Upsells</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                         <!-- Expand Sales Through More Channels -->
                         <h3 class="impact-category-title text-blue-600">Expand Sales Through More Channels</h3>
                         <div class="impact-grid-container mb-12">
-                            <div class="impact-tile" data-impact-type="channels-agent-bookings" data-value="30%" data-description="More Bookings through Agents & Resellers">
+                            <div class="impact-tile" data-insight-id="tours-channels-agents" data-value="30%" data-description="More Bookings through Agents & Resellers">
                                 <p class="value">30%</p>
                                 <p class="description">More Bookings through Agents & Resellers</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="channels-global-reach" data-value="Global Reach" data-description="with Viator, Expedia, Google & more">
+                            <div class="impact-tile" data-insight-id="tours-channels-global" data-value="Global Reach" data-description="with Viator, Expedia, Google & more">
                                 <p class="value">Global Reach</p>
                                 <p class="description">with Viator, Expedia, Google & more</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="channels-no-overbookings" data-value="No More" data-description="Overbookings (Real-time Inventory Sync)">
+                            <div class="impact-tile" data-insight-id="tours-channels-no-overbookings" data-value="No More" data-description="Overbookings (Real-time Inventory Sync)">
                                 <p class="value">No More</p>
                                 <p class="description">Overbookings (Real-time Inventory Sync)</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="channels-track-roi" data-value="Track ROI" data-description="on Partners with Precision">
+                            <div class="impact-tile" data-insight-id="tours-channels-track-roi" data-value="Track ROI" data-description="on Partners with Precision">
                                 <p class="value">Track ROI</p>
                                 <p class="description">on Partners with Precision</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                         <!-- Streamline Operations & Save on Overhead -->
                         <h3 class="impact-category-title text-blue-600">Streamline Operations & Save on Overhead</h3>
                         <div class="impact-grid-container mb-12">
-                            <div class="impact-tile" data-impact-type="operations-workload" data-value="75%" data-description="Reduction in Office Workload">
+                            <div class="impact-tile" data-insight-id="tours-operations-workload" data-value="75%" data-description="Reduction in Office Workload">
                                 <p class="value">75%</p>
                                 <p class="description">Reduction in Office Workload</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="operations-grow-without-staff" data-value="Grow Bookings" data-description="Without Growing Staff">
+                            <div class="impact-tile" data-insight-id="tours-operations-grow-without-staff" data-value="Grow Bookings" data-description="Without Growing Staff">
                                 <p class="value">Grow Bookings</p>
                                 <p class="description">Without Growing Staff</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="operations-checkin" data-value="Speed Up" data-description="Guest Check-in">
+                            <div class="impact-tile" data-insight-id="tours-operations-checkin" data-value="Speed Up" data-description="Guest Check-in">
                                 <p class="value">Speed Up</p>
                                 <p class="description">Guest Check-in</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="operations-consolidate" data-value="Consolidate Tools" data-description="Reduce Software Spend">
+                            <div class="impact-tile" data-insight-id="tours-operations-consolidate" data-value="Consolidate Tools" data-description="Reduce Software Spend">
                                 <p class="value">Consolidate Tools</p>
                                 <p class="description">Reduce Software Spend</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                         <!-- Create a Seamless Experience for Guests -->
                         <h3 class="impact-category-title text-blue-600">Create a Seamless Experience for Guests</h3>
                         <div class="impact-grid-container">
-                            <div class="impact-tile" data-impact-type="guest-online-bookings" data-value="Shift 50%" data-description="of Bookings Online">
+                            <div class="impact-tile" data-insight-id="tours-guest-online" data-value="Shift 50%" data-description="of Bookings Online">
                                 <p class="value">Shift 50%</p>
                                 <p class="description">of Bookings Online</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-reviews" data-value="10x More" data-description="Guest Reviews">
+                            <div class="impact-tile" data-insight-id="tours-guest-reviews" data-value="10x More" data-description="Guest Reviews">
                                 <p class="value">10x More</p>
                                 <p class="description">Guest Reviews</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-sell-24-7" data-value="Sell 24/7" data-description="Even While You Sleep">
+                            <div class="impact-tile" data-insight-id="tours-guest-sell-24-7" data-value="Sell 24/7" data-description="Even While You Sleep">
                                 <p class="value">Sell 24/7</p>
                                 <p class="description">Even While You Sleep</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-fewer-abandoned" data-value="Fewer Abandoned" data-description="Carts, More Confirmed Bookings">
+                            <div class="impact-tile" data-insight-id="tours-guest-fewer-abandoned" data-value="Fewer Abandoned" data-description="Carts, More Confirmed Bookings">
                                 <p class="value">Fewer Abandoned</p>
                                 <p class="description">Carts, More Confirmed Bookings</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
-                            <div class="impact-tile" data-impact-type="guest-repeat-business" data-value="Earn More" data-description="5-Star Reviews & Repeat Business">
+                            <div class="impact-tile" data-insight-id="tours-guest-repeat" data-value="Earn More" data-description="5-Star Reviews & Repeat Business">
                                 <p class="value">Earn More</p>
                                 <p class="description">5-Star Reviews & Repeat Business</p>
-                                <div class="impact-tile-overlay">Click for Insight</div>
+                                <div class="impact-tile-overlay">Show Insight</div>
                             </div>
                         </div>
                     </div>
@@ -1330,8 +1323,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-12">
-                            <button id="revenueInsightBtn-tours" class="cta-button text-base px-6 py-3">
-                                Get AI Insight on Revenue
+                            <button class="cta-button text-base px-6 py-3" data-insight-id="tours-revenue-insight">
+                                Show Insight on Revenue
                                 <div id="lottie-ai-brain-small-revenue-tours" class="lottie-animation-container w-8 h-8"></div>
                             </button>
                         </div>
@@ -1370,8 +1363,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-12">
-                            <button id="efficiencyInsightBtn-tours" class="cta-button text-base px-6 py-3">
-                                Get AI Insight on Efficiency
+                            <button class="cta-button text-base px-6 py-3" data-insight-id="tours-efficiency-insight">
+                                Show Insight on Efficiency
                                 <div id="lottie-ai-brain-small-efficiency-tours" class="lottie-animation-container w-8 h-8"></div>
                             </button>
                         </div>
@@ -1410,8 +1403,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-12">
-                            <button id="cxInsightBtn-tours" class="cta-button text-base px-6 py-3">
-                                Get AI Insight on Customer Experience
+                            <button class="cta-button text-base px-6 py-3" data-insight-id="tours-cx-insight">
+                                Show Insight on Customer Experience
                                 <div id="lottie-ai-brain-small-cx-tours" class="lottie-animation-container w-8 h-8"></div>
                             </button>
                         </div>
@@ -1428,10 +1421,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">How Orca Spirit Adventures Drives Success with Zaui</h4>
                             <p class="text-gray-500 text-sm mb-3">Discover how Orca Spirit Adventures, a premier whale watching company, transformed their operations with Zaui.</p>
                             <a href="https://www.zaui.com/blog/orca-spirit-adventures-zaui-case-study/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-tours mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="Orca Spirit Adventures: Whale Watching Success"
-                                    data-snippet="Orca Spirit Adventures leveraged Zaui's booking engine to streamline their online reservations and manage capacity for their popular whale watching tours. The real-time inventory management prevents overbookings, and the automated communication features keep guests informed about weather and tour details. This has led to a better guest experience and reduced administrative time. An operator could use Zaui to manage capacity on popular tours, automate confirmations and reminders, and provide a seamless booking experience for their guests, leading to higher customer satisfaction and repeat business.">
-                                ✨ AI Insight for Tour Operators
+                                    data-insight-id="case-study-tours-orca-spirit">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Case Study 2 -->
@@ -1439,10 +1432,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Banff Adventures: From Manual Bookings to Automated Success</h4>
                             <p class="text-gray-500 text-sm mb-3">Explore how Banff Adventures integrated a robust booking solution to handle complex seasonal demand for their multi-activity offerings.</p>
                             <a href="https://www.zaui.com/blog/banff-adventures-case-study/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-tours mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="Banff Adventures: Multi-Activity Management"
-                                    data-snippet="Banff Adventures transitioned from a manual system to Zaui to effectively manage a diverse range of activities, from hiking and canoeing to skiing and snowshoeing. Zaui's single, unified platform allowed them to sell and manage all products in one place, eliminating scheduling conflicts and providing a better overview of their business. A tour operator could use Zaui to centralize their operations, managing multiple tour types and locations from a single system, streamlining staff scheduling and resource allocation, and preventing double-bookings.">
-                                ✨ AI Insight for Tour Operators
+                                    data-insight-id="case-study-tours-banff">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Case Study 3 -->
@@ -1450,10 +1443,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Ziptrek Ecotours: Scaling Adventures with Zaui</h4>
                             <p class="text-gray-500 text-sm mb-3">See how Ziptrek Ecotours uses Zaui to manage high-volume bookings and complex logistical challenges for their popular ziplining courses.</p>
                             <a href="https://whistler.ziptrek.com/case-study/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-tours mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="Ziptrek Ecotours: High-Volume Adventure Logistics"
-                                    data-snippet="Ziptrek Ecotours, with its popular and intricate zipline courses, required a robust system to handle high booking volumes and complex tour logistics. Zaui's platform provided them with a scalable solution that managed everything from booking and waivers to staff scheduling and equipment tracking. This allowed them to focus on providing a safe and thrilling experience for their guests rather than getting bogged down in administrative tasks. A tour operator could leverage these features to automate complex scheduling, manage equipment inventory, and provide a seamless check-in process, ensuring smooth and safe operations even with a large number of daily guests.">
-                                ✨ AI Insight for Tour Operators
+                                    data-insight-id="case-study-tours-ziptrek">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Case Study 4 -->
@@ -1461,10 +1454,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Polar Adventures: Navigating Nordic Tours with Zaui</h4>
                             <p class="text-gray-500 text-sm mb-3">Understand how Polar Adventures enhances its guest experience and streamlines booking for its unique Arctic excursions.</p>
                             <a href="https://www.polaradventures.no/en/booking/tours" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm">Read More &rarr;</a>
-                            <button class="generate-insights-btn-tours mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="generate-insights-btn"
                                     data-title="Polar Adventures: Unique Excursion Management"
-                                    data-snippet="Polar Adventures needed a flexible booking system to handle their specialized tours in the challenging Arctic environment. Zaui provided a solution that could manage bookings for various excursions, from dog sledding to Northern Lights hunts, with real-time availability and dynamic pricing to account for seasonal demand. The system's ability to handle intricate booking rules and manifest management was crucial. A tour operator specializing in unique or niche activities can use Zaui to create a tailored booking experience, manage complex schedules, and dynamically price their offerings to maximize revenue in a competitive market.">
-                                ✨ AI Insight for Tour Operators
+                                    data-insight-id="case-study-tours-polar">
+                                Show Insight
                             </button>
                         </div>
                     </div>
@@ -1512,10 +1505,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Comprehensive Guide to Managing Service Disruptions for Tour Operators</h4>
                             <p class="text-gray-500 text-sm mb-3">Essential strategies for tour operators to effectively manage and mitigate service disruptions.</p>
                             <a href="https://www.zaui.com/blog/comprehensive-guide-to-managing-service-disruptions-for-tour-operators/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm mt-4">Read Article &rarr;</a>
-                            <button class="summarize-blog-btn-tours mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="summarize-blog-btn"
                                     data-title="Comprehensive Guide to Managing Service Disruptions for Tour Operators"
-                                    data-snippet="Essential strategies for tour operators to effectively manage and mitigate service disruptions.">
-                                🧠 Summarize with AI
+                                    data-insight-id="blog-tours-disruptions">
+                                Show Insight
                             </button>
                         </div>
                         <!-- Blog Post 2 -->
@@ -1523,10 +1516,10 @@
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">How to Start a Tour Business in 2025: Practical Guide</h4>
                             <p class="text-gray-500 text-sm mb-3">A practical guide for aspiring entrepreneurs on starting a successful tour business in the current market.</p>
                             <a href="https://www.zaui.com/blog/how-to-start-a-tour-business-in-2025-practical-guide/" target="_blank" class="inline-block text-blue-600 hover:text-blue-500 font-medium text-sm mt-4">Read Article &rarr;</a>
-                            <button class="summarize-blog-btn-tours mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm"
+                            <button class="summarize-blog-btn"
                                     data-title="How to Start a Tour Business in 2025: Practical Guide"
-                                    data-snippet="A practical guide for aspiring entrepreneurs on starting a successful tour business in the current market.">
-                                🧠 Summarize with AI
+                                    data-insight-id="blog-tours-start-business">
+                                Show Insight
                             </button>
                         </div>
                     </div>
@@ -1540,14 +1533,20 @@
                 </h3>
                 <div class="bg-gray-100 rounded-lg p-6 shadow-lg text-center">
                     <p class="text-gray-600 text-lg mb-4">
-                        Enter a business aspect (e.g., "guest safety", "fleet management", "revenue growth") to see how the Zaui platform provides benefits.
+                        Click an option below to see how Zaui helps with key business aspects.
                     </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-                        <input type="text" id="benefitAspectInput" placeholder="e.g., 'passenger safety' or 'staff scheduling'"
-                               class="flex-grow p-3 rounded-lg bg-white text-gray-900 border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 placeholder-gray-400">
-                        <button id="generateBenefitBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center">
-                            💡 Generate Benefit Insight
-                            <span id="benefitLoadingSpinner" class="loading-spinner hidden"></span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                        <button class="generate-benefit-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center text-sm"
+                                data-aspect="Guest Safety" data-insight-id="benefit-guest-safety">
+                            Guest Safety
+                        </button>
+                        <button class="generate-benefit-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center text-sm"
+                                data-aspect="Fleet Management" data-insight-id="benefit-fleet-management">
+                            Fleet Management
+                        </button>
+                        <button class="generate-benefit-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center text-sm"
+                                data-aspect="Staff Scheduling" data-insight-id="benefit-staff-scheduling">
+                            Staff Scheduling
                         </button>
                     </div>
                     <div id="generatedBenefitOutput" class="mt-4 p-4 bg-white rounded-lg text-left text-gray-900 hidden">
@@ -1636,7 +1635,6 @@
             <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-blue-600"></h3>
             <div id="modalText" class="text-gray-600 leading-relaxed">
                 <!-- Content will be injected here by JavaScript -->
-                <div id="modalLoadingSpinner" class="loading-spinner mx-auto mt-4 hidden"></div>
             </div>
             <button id="copyInsightsBtn" class="mt-6 bg-gray-300 hover:bg-gray-400 text-gray-900 font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-sm">
                 Copy to Clipboard
@@ -1644,42 +1642,29 @@
         </div>
     </div>
 
-    <!-- Loading Overlay for AI Calls -->
-    <div id="loadingOverlay">
-        <div id="loadingLottieContainer" class="lottie-container"></div>
-        <p class="text-white">Generating AI Insight...</p>
-    </div>
-
     <script>
-        // Placeholder for the API Key which will be provided by the environment
-        const API_KEY = "";
-        
-        // Lottie Animations Initialization
-        const lottieAnimations = [
-            // Tours Lotties
-            { id: 'lottie-revenue-money-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_gndj3y.json' },
-            { id: 'lottie-revenue-channels-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_khtx5m.json' },
-            { id: 'lottie-efficiency-automation-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_j3d0v2.json' },
-            { id: 'lottie-efficiency-checkin-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_pzt350.json' },
-            { id: 'lottie-cx-booking-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_vj9h5q.json' },
-            { id: 'lottie-cx-communication-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_l5q2f6.json' },
-            { id: 'lottie-ai-brain-small-revenue-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
-            { id: 'lottie-ai-brain-small-efficiency-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
-            { id: 'lottie-ai-brain-small-cx-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
-            // Transportation Lotties
-            { id: 'lottie-revenue-money-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_gndj3y.json' },
-            { id: 'lottie-revenue-channels-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_khtx5m.json' },
-            { id: 'lottie-efficiency-automation-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_j3d0v2.json' },
-            { id: 'lottie-efficiency-checkin-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_pzt350.json' },
-            { id: 'lottie-cx-booking-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_vj9h5q.json' },
-            { id: 'lottie-cx-communication-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_l5q2f6.json' },
-            { id: 'lottie-ai-brain-small-revenue-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
-            { id: 'lottie-ai-brain-small-efficiency-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
-            { id: 'lottie-ai-brain-small-cx-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
-        ];
-
         document.addEventListener('DOMContentLoaded', () => {
-            // Load all Lottie animations
+            const lottieAnimations = [
+                { id: 'lottie-revenue-money-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_gndj3y.json' },
+                { id: 'lottie-revenue-channels-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_khtx5m.json' },
+                { id: 'lottie-efficiency-automation-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_j3d0v2.json' },
+                { id: 'lottie-efficiency-checkin-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_pzt350.json' },
+                { id: 'lottie-cx-booking-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_vj9h5q.json' },
+                { id: 'lottie-cx-communication-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_l5q2f6.json' },
+                { id: 'lottie-ai-brain-small-revenue-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
+                { id: 'lottie-ai-brain-small-efficiency-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
+                { id: 'lottie-ai-brain-small-cx-tours', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
+                { id: 'lottie-revenue-money-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_gndj3y.json' },
+                { id: 'lottie-revenue-channels-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_khtx5m.json' },
+                { id: 'lottie-efficiency-automation-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_j3d0v2.json' },
+                { id: 'lottie-efficiency-checkin-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_pzt350.json' },
+                { id: 'lottie-cx-booking-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_vj9h5q.json' },
+                { id: 'lottie-cx-communication-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_l5q2f6.json' },
+                { id: 'lottie-ai-brain-small-revenue-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
+                { id: 'lottie-ai-brain-small-efficiency-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
+                { id: 'lottie-ai-brain-small-cx-transportation', path: 'https://assets1.lottiefiles.com/packages/lf20_tq2s3p.json' },
+            ];
+
             lottieAnimations.forEach(anim => {
                 const container = document.getElementById(anim.id);
                 if (container) {
@@ -1693,53 +1678,12 @@
                 }
             });
 
-            // Load the animation for the full-page loading overlay
-            const loadingLottieContainer = document.getElementById('loadingLottieContainer');
-            if (loadingLottieContainer) {
-                lottie.loadAnimation({
-                    container: loadingLottieContainer,
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: "https://assets1.lottiefiles.com/packages/lf20_tijg9j6f.json"
-                });
-            }
-
-            // Initialize moving elements
-            const movingElementsContainer = document.getElementById('movingElementsContainer');
-            for (let i = 0; i < 15; i++) {
-                const element = document.createElement('div');
-                element.classList.add('moving-element');
-                const size = Math.random() * 20 + 10;
-                element.style.width = `${size}px`;
-                element.style.height = `${size}px`;
-                element.style.left = `${Math.random() * 100}vw`;
-                element.style.top = `${Math.random() * 100}vh`;
-                element.style.animationDuration = `${Math.random() * 10 + 5}s`;
-                element.style.animationDelay = `${Math.random() * 5}s`;
-                element.style.setProperty('--x-offset-1', `${(Math.random() - 0.5) * 200}px`);
-                element.style.setProperty('--y-offset-1', `${(Math.random() - 0.5) * 200}px`);
-                element.style.setProperty('--x-offset-2', `${(Math.random() - 0.5) * 200}px`);
-                element.style.setProperty('--y-offset-2', `${(Math.random() - 0.5) * 200}px`);
-                element.style.setProperty('--x-offset-3', `${(Math.random() - 0.5) * 200}px`);
-                element.style.setProperty('--y-offset-3', `${(Math.random() - 0.5) * 200}px`);
-                movingElementsContainer.appendChild(element);
-            }
-            
-            // Initial view setup
+            // Initial view setup (Transportation is active by default)
             const toursView = document.getElementById('tours-view');
             const transportationView = document.getElementById('transportation-view');
             const tourToggleBtn = document.getElementById('toggle-tours');
             const transportToggleBtn = document.getElementById('toggle-transportation');
             
-
-            // Set initial state for transportation
-            toursView.classList.remove('active');
-            transportationView.classList.add('active');
-            tourToggleBtn.classList.remove('active');
-            transportToggleBtn.classList.add('active');
-            
-            // Toggling function
             function toggleViews(activeViewId) {
                 if (activeViewId === 'tours-view') {
                     toursView.classList.add('active');
@@ -1754,30 +1698,8 @@
                 }
             }
 
-            // Add event listeners for toggle buttons
             tourToggleBtn.addEventListener('click', () => toggleViews('tours-view'));
             transportToggleBtn.addEventListener('click', () => toggleViews('transportation-view'));
-
-            // Clickable "What You Can Find on This Page" boxes for scrolling
-            document.querySelectorAll('#what-you-can-find-section-tours [data-target]').forEach(box => {
-                box.addEventListener('click', function() {
-                    const targetId = this.dataset.target;
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
-            });
-
-            document.querySelectorAll('#what-you-can-find-section-transportation [data-target]').forEach(box => {
-                box.addEventListener('click', function() {
-                    const targetId = this.dataset.target;
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
-            });
         });
         
         // Parallax effect for background
@@ -1826,362 +1748,285 @@
         const insightsModal = document.getElementById('insightsModal');
         const modalTitle = insightsModal.querySelector('#modalTitle');
         const modalText = insightsModal.querySelector('#modalText');
-        const modalLoadingSpinner = insightsModal.querySelector('#modalLoadingSpinner');
         const copyInsightsBtn = document.getElementById('copyInsightsBtn');
-        const loadingOverlay = document.getElementById('loadingOverlay');
 
-        function showLoading() {
-            loadingOverlay.classList.add('show');
-        }
-
-        function hideLoading() {
-            loadingOverlay.classList.remove('show');
-        }
-
-        function showInsightModal(title) {
-            modalTitle.textContent = title;
-            modalText.innerHTML = '<div class="ai-loading-spinner"><span class="loading-spinner"></span> Generating insight...</div>';
-            modalLoadingSpinner.classList.remove('hidden');
-            copyInsightsBtn.classList.add('hidden');
+        function showInsightModal(title, text) {
+            modalTitle.innerHTML = title;
+            modalText.innerHTML = text;
+            copyInsightsBtn.onclick = () => copyToClipboard(modalText.innerText);
+            copyInsightsBtn.classList.remove('hidden');
             insightsModal.classList.add('show');
         }
 
         function hideInsightModal() {
             insightsModal.classList.remove('show');
-            modalText.innerHTML = '';
-            modalTitle.textContent = '';
-            modalLoadingSpinner.classList.add('hidden');
-            copyInsightsBtn.classList.add('hidden');
         }
 
         insightsModal.querySelector('.close-button').addEventListener('click', hideInsightModal);
 
-        const tourImpactPrompts = {
-            'tour-experience': "Explain the significance of Zaui's 25 years of experience (since 1999, working with thousands of operators) for a tour and activity company, highlighting how this longevity and experience translate into benefits such as a stable platform, refined features, and deep industry understanding. What does this mean for a tour operator?",
-            'tour-growth': "Explain the significance of Zaui's average client growth of 14% year-over-year for a tour and activity company, detailing what this consistent growth implies for their potential in terms of scalability and market expansion. What does this mean for a tour operator?",
-            'revenue-tour-lifetime': "Explain the significance of long-term Zaui users scaling their business by 275% since adoption, and how this long-term growth potential applies to a tour operator, emphasizing sustained competitive advantage. What does this mean for a tour operator?",
-            'revenue-peak-season': "Explain how Zaui's dynamic pricing can lead to a 20% revenue increase in peak season for a tour operator, focusing on optimizing high-demand periods and strategically influencing guest flow across diverse tours. What does this mean for a tour operator?",
-            'revenue-online-sales': "Explain how a seamless checkout process can increase online sales and reduce cart abandonment for a tour and activity operator. What does this mean for a tour operator?",
-            'revenue-upsells': "Explain how Zaui helps tour operators boost their average order value (AOV) by seamlessly offering add-ons and upsells during the booking process. What does this mean for a tour operator?",
-            'channels-agent-bookings': "Explain how Zaui's agent portal can drive 30% more indirect bookings for a tour operator from hotels, affiliates, and concierges, expanding their sales network efficiently. What does this mean for a tour operator?",
-            'channels-global-reach': "Explain how Zaui provides global reach with integrations like Viator, Expedia, and Google Things to Do, and how this benefits a tour operator in reaching international guests without high commissions. What does this mean for a tour operator?",
-            'channels-no-overbookings': "Explain how Zaui's real-time inventory sync across all channels (direct, OTA, agent) eliminates overbookings, ensuring critical accuracy and reliability for a tour operator's daily operations. What does this mean for a tour operator?",
-            'channels-track-roi': "Explain how Zaui's unique affiliate links and commission tracking provide full transparency on partner ROI, allowing a tour operator to optimize its reseller relationships and marketing spend. What does this mean for a tour operator?",
-            'operations-workload': "Explain how Zaui automates bookings, confirmations, payments, and communications to cut office workload by 75% and the potential impact on a tour operator's administrative efficiency. What does this mean for a tour operator?",
-            'operations-grow-without-staff': "Explain how Zaui enables growing bookings without growing staff and how this scalability benefits a tour operator's expanding guest volume. What does this mean for a tour operator?",
-            'operations-checkin': "Explain how Zaui's mobile apps and QR ticket scanning speed up guest check-in, and how this improves a tour operator's operational flow, especially at busy tour departure points. What does this mean for a tour operator?",
-            'operations-consolidate': "Explain how Zaui consolidates CRM, POS, OTA manager, and more into one unified platform, and the financial and operational benefits of this system consolidation for a tour operator. What does this mean for a tour operator?",
-            'guest-online-bookings': "Explain how Zaui can help a tour operator shift up to 50% of its bookings online, enhancing convenience for guests and significantly reducing phone-based administrative tasks. What does this mean for a tour operator?",
-            'guest-reviews': "Explain how Zaui's automated review requests can drive a massive increase in guest reviews (10x more), enhancing a tour operator's online reputation and attracting new guests. What does this mean for a tour operator?",
-            'guest-sell-24-7': "Explain the benefit of Zaui's always-on booking capability (sell 24/7, even while you sleep) for a tour operator, particularly for international travelers and convenience. What does this mean for a tour operator?",
-            'guest-fewer-abandoned': "Explain how Zaui's user-friendly checkout leads to fewer abandoned carts and more confirmed bookings, directly impacting a tour operator's conversion rates and revenue. What does this mean for a tour operator?",
-            'guest-repeat-business': "Explain how Zaui helps a tour operator earn more 5-star reviews and repeat business through smooth operations and great communication, and its long-term value for a tour operator's brand loyalty. What does this mean for a tour operator?",
+        // --- Predetermined Insights Data Structure ---
+        const insights = {
+            // General Transportation Insights
+            "transportation-overall-experience": `
+                <h4>The Power of Experience: A Stable Platform for Boreal</h4>
+                <p>Zaui’s <strong>25 years of experience</strong> is a testament to its stability and deep industry knowledge. For Boreal, this means you are partnering with a solution that is not a new player in the market, but a proven system that has evolved with the industry. This longevity translates into:</p>
+                <ul>
+                    <li><strong>Platform Stability:</strong> A robust system tested over decades of real-world use.</li>
+                    <li><strong>Refined Features:</strong> Features that are not just theoretical, but have been refined based on feedback from thousands of operators.</li>
+                    <li><strong>Industry Expertise:</strong> A partner that understands the nuances and challenges of the transportation and tour sectors.</li>
+                </ul>
+            `,
+            "transportation-overall-growth": `
+                <h4>Driving Consistent Growth for Boreal</h4>
+                <p>An average **14% year-over-year growth** for Zaui customers isn't just a number—it's a reflection of Zaui’s ability to fuel sustainable business expansion. This means Boreal can expect the platform to:</p>
+                <ul>
+                    <li><strong>Scale with You:</strong> Handle increasing passenger volumes and new routes without performance degradation.</li>
+                    <li><strong>Enable Expansion:</strong> Support your growth into new markets and service offerings seamlessly.</li>
+                    <li><strong>Stay Ahead:</strong> Benefit from a product roadmap focused on continuous improvement and market-leading features.</li>
+                </ul>
+            `,
+            // Transportation Revenue Insights
+            "transportation-revenue-lifetime": `
+                <h4>The Long-Term Value of Partnership</h4>
+                <p>Long-term Zaui users have scaled their businesses by an impressive **275%** since adopting the platform. For Boreal, this demonstrates that Zaui is not just a solution for today, but a strategic partner for the future. The platform is built for sustained growth and offers the tools necessary to expand revenue streams over time, providing a significant and long-lasting competitive advantage.</p>
+            `,
+            "transportation-revenue-peak": `
+                <h4>Optimizing Peak Season Profitability</h4>
+                <p>Zaui’s dynamic pricing engine allows transport operators to achieve up to a **20% revenue increase** during peak seasons. By automatically adjusting fares based on demand, seasonality, and availability, the system ensures that no seat on your buses, ferries, or tourist coaches is undervalued. This enables you to maximize revenue during high-demand periods while also attracting passengers during off-peak times with strategic pricing.</p>
+            `,
+            "transportation-channels-agents": `
+                <h4>Expand Your Sales Network</h4>
+                <p>The Zaui agent portal empowers Boreal to drive up to **30% more bookings** through a trusted network of hotels, affiliates, and concierges. This feature provides these partners with a seamless, real-time booking tool, eliminating manual communication and commission tracking. It's a powerful way to expand your reach and fill capacity efficiently without increasing your marketing spend.</p>
+            `,
+            "transportation-channels-global": `
+                <h4>Seamless Global Connectivity</h4>
+                <p>Zaui provides global reach by integrating with major OTAs like Viator, Expedia, and GetYourGuide. As an **official Google Things to Do partner**, Zaui also enables commission-free direct bookings from Google searches. This means Boreal can reach a massive international audience, attract more tourist passengers, and increase direct bookings without high commissions.</p>
+            `,
+            "transportation-channels-no-overbookings": `
+                <h4>Eliminate Overbooking Stress</h4>
+                <p>Zaui's real-time inventory synchronization is a game-changer for transportation companies with high-volume schedules. It ensures that every booking—whether from your website, an OTA, or an agent—updates instantly across all channels. For Boreal, this means **no more overbookings**, guaranteeing operational accuracy and passenger satisfaction, which is critical for maintaining service reliability.</p>
+            `,
+            "transportation-channels-brands": `
+                <h4>Unified Management of Diverse Services</h4>
+                <p>For a company with multiple service lines like Boreal (buses, ferries, tourist coaches), managing them from one system is crucial. Zaui’s platform allows you to manage all brands, locations, and service types from a **single, unified dashboard**, providing a comprehensive overview of your entire operation and preventing scheduling conflicts across your diverse fleet.</p>
+            `,
+            "transportation-operations-workload": `
+                <h4>Automate and Optimize Your Operations</h4>
+                <p>Zaui automates the core administrative tasks—bookings, confirmations, payments, and communications—which can lead to a **75% reduction in office workload**. This frees up your staff from repetitive manual data entry and allows them to focus on high-value tasks, like customer service and strategic planning, making your operations significantly more efficient.</p>
+            `,
+            "transportation-operations-grow-without-staff": `
+                <h4>Scale Your Business, Not Your Headcount</h4>
+                <p>Zaui's platform provides the scalability needed to handle increasing passenger volumes without the proportional need for more administrative staff. The automation tools and self-serve booking capabilities mean Boreal can **grow its bookings** and expand its network while keeping its operational team lean and focused, which directly impacts your bottom line.</p>
+            `,
+            "transportation-operations-speed-checkin": `
+                <h4>Faster Boarding, Happier Passengers</h4>
+                <p>With Zaui's mobile app and QR code scanning, the boarding and check-in process becomes lightning fast. Your drivers and on-site staff can quickly validate tickets, minimizing queues and delays at busy terminals. For Boreal, this translates to a smoother, more professional boarding experience and a better start to every passenger's journey.</p>
+            `,
+            "transportation-operations-consolidate": `
+                <h4>All-in-One Platform, Reduced Costs</h4>
+                <p>Zaui consolidates multiple essential tools—CRM, POS, OTA manager, and more—into one powerful platform. This eliminates the need for fragmented, disparate software systems, which reduces your software spend and simplifies your tech stack. It's an all-in-one solution that provides a single source of truth for your entire operation.</p>
+            `,
+            "transportation-guest-online": `
+                <h4>Effortless Online Bookings</h4>
+                <p>By shifting up to **50% of your bookings online**, Zaui makes it incredibly convenient for your passengers to book and manage their travel. Our intuitive, mobile-first booking engine is available 24/7, reducing the administrative burden of phone inquiries and ensuring your services are always accessible to travelers, both local and international.</p>
+            `,
+            "transportation-guest-reviews": `
+                <h4>Boost Your Reputation with Reviews</h4>
+                <p>Zaui’s automated follow-up communication system is designed to drive a massive increase in guest reviews, often by as much as **10x**. For Boreal, this means a stronger online reputation, more social proof, and a powerful feedback loop to continuously improve your services and attract new customers.</p>
+            `,
+            "transportation-guest-sell-24-7": `
+                <h4>Your Business Never Sleeps</h4>
+                <p>With Zaui, your booking system is always-on, allowing you to **sell tickets 24/7, even while you sleep**. This is especially beneficial for international travelers booking across different time zones, ensuring you never miss a booking opportunity. Your sales team and front desk staff are no longer the bottleneck to your revenue stream.</p>
+            `,
+            "transportation-guest-fewer-abandoned": `
+                <h4>Convert More Browsers into Buyers</h4>
+                <p>Zaui's user-friendly and streamlined checkout process is designed to minimize friction and reduce abandoned carts. This directly impacts Boreal's conversion rates and revenue, ensuring that more people who start a booking complete it. The result is a more efficient sales funnel and more confirmed passenger tickets.</p>
+            `,
+            "transportation-guest-repeat": `
+                <h4>Build Passenger Loyalty</h4>
+                <p>By providing a seamless booking experience, proactive communication, and efficient service, Zaui helps Boreal earn more **5-star reviews and repeat business**. A happy passenger is a loyal passenger, and Zaui gives you the tools to delight customers at every touchpoint, strengthening your brand's reputation and long-term value.</p>
+            `,
+            // Tours Insights
+            "tours-overall-experience": `
+                <h4>The Power of Experience: A Stable Platform for Boreal</h4>
+                <p>Zaui’s **25 years of experience** is a testament to its stability and deep industry knowledge. For Boreal, this means you are partnering with a solution that has been refined by feedback from thousands of tour and activity operators over decades. This longevity translates into:</p>
+                <ul>
+                    <li><strong>Platform Stability:</strong> A robust system tested over decades of real-world use.</li>
+                    <li><strong>Refined Features:</strong> Features that are not just theoretical, but have been perfected for the unique needs of tour operators.</li>
+                    <li><strong>Industry Expertise:</strong> A partner that understands the nuances of tour operations, from complex scheduling to seasonal demand.</li>
+                </ul>
+            `,
+            "tours-overall-growth": `
+                <h4>Driving Consistent Growth for Boreal's Tours</h4>
+                <p>An average **14% year-over-year growth** for Zaui customers isn't just a number—it's a reflection of Zaui’s ability to fuel sustainable business expansion. This means Boreal can expect the platform to:</p>
+                <ul>
+                    <li><strong>Scale with You:</strong> Handle increasing guest volumes and new tour offerings without performance degradation.</li>
+                    <li><strong>Enable Expansion:</strong> Support your growth into new markets and unique tour experiences seamlessly.</li>
+                    <li><strong>Stay Ahead:</strong> Benefit from a product roadmap focused on continuous innovation tailored for the tour industry.</li>
+                </ul>
+            `,
+            "tours-revenue-lifetime": `
+                <h4>The Long-Term Value of Partnership</h4>
+                <p>Long-term Zaui users have scaled their businesses by an impressive **275%** since adopting the platform. For Boreal's tour division, this demonstrates that Zaui is not just a solution for today, but a strategic partner for the future. The platform is built for sustained growth and offers the tools necessary to expand revenue streams over time, providing a significant and long-lasting competitive advantage.</p>
+            `,
+            "tours-revenue-peak": `
+                <h4>Optimizing Peak Season Profitability</h4>
+                <p>Zaui’s dynamic pricing engine allows tour operators to achieve up to a **20% revenue increase** during peak seasons. By automatically adjusting prices based on demand, seasonality, and availability, the system ensures that every spot on your tours is optimized for profitability. This enables you to maximize revenue during high-demand periods while also filling capacity during quieter times.</p>
+            `,
+            "tours-revenue-online-sales": `
+                <h4>Boost Online Sales with a Seamless Checkout</h4>
+                <p>A frictionless online checkout process is critical for converting interest into bookings. Zaui's mobile-first, easy-to-use booking engine reduces cart abandonment and increases conversion rates. This means more guests complete their bookings directly on your website, providing Boreal with more confirmed sales and fewer missed opportunities.</p>
+            `,
+            "tours-revenue-upsells": `
+                <h4>Increase Average Order Value</h4>
+                <p>Zaui helps tour operators significantly **boost their average order value (AOV)** by seamlessly offering add-ons and upsells during the booking process. The system intelligently prompts guests with relevant extras like merchandise, equipment rentals, or photo packages, increasing profitability per booking without any extra effort from your staff.</p>
+            `,
+            "tours-channels-agents": `
+                <h4>Expand Your Sales Network</h4>
+                <p>The Zaui agent portal empowers Boreal to drive up to **30% more bookings** through a trusted network of hotels, affiliates, and concierges. This feature provides these partners with a seamless, real-time booking tool, eliminating manual communication and commission tracking. It's a powerful way to expand your reach and fill tour capacity efficiently.</p>
+            `,
+            "tours-channels-global": `
+                <h4>Seamless Global Connectivity</h4>
+                <p>Zaui provides global reach by integrating with major OTAs like Viator, Expedia, and GetYourGuide. As an **official Google Things to Do partner**, Zaui also enables commission-free direct bookings from Google searches. This means Boreal can reach a massive international audience for its tours, attract more guests, and increase direct bookings without high commissions.</p>
+            `,
+            "tours-channels-no-overbookings": `
+                <h4>Eliminate Overbooking Stress</h4>
+                <p>Zaui's real-time inventory synchronization is a game-changer for tour operators. It ensures that every booking—whether from your website, an OTA, or an agent—updates instantly across all channels. For Boreal, this means **no more overbookings**, guaranteeing operational accuracy and a smooth, reliable experience for every guest.</p>
+            `,
+            "tours-channels-track-roi": `
+                <h4>Track Partner ROI with Precision</h4>
+                <p>Zaui's unique affiliate links and commission tracking provide full transparency on partner ROI. This allows Boreal to see exactly which resellers and partners are driving the most value, enabling you to optimize your marketing spend and strengthen your most profitable relationships with data-driven decisions.</p>
+            `,
+            "tours-operations-workload": `
+                <h4>Automate and Optimize Your Operations</h4>
+                <p>Zaui automates the core administrative tasks—bookings, confirmations, payments, and communications—which can lead to a **75% reduction in office workload**. This frees up your staff from repetitive manual data entry and allows them to focus on creating unforgettable experiences for your guests.</p>
+            `,
+            "tours-operations-grow-without-staff": `
+                <h4>Scale Your Business, Not Your Headcount</h4>
+                <p>Zaui's platform provides the scalability needed to handle increasing guest volumes without the proportional need for more administrative staff. The automation tools and self-serve booking capabilities mean Boreal can **grow its bookings** and expand its tour offerings while keeping its operational team lean and focused, which directly impacts your bottom line.</p>
+            `,
+            "tours-operations-checkin": `
+                <h4>Faster Guest Check-in, Smoother Tours</h4>
+                <p>With Zaui's mobile app and QR code scanning, the check-in process becomes lightning fast. Your guides and on-site staff can quickly validate tickets, minimizing queues and delays at tour departure points. This translates to a smoother, more professional experience for guests and a better start to every adventure.</p>
+            `,
+            "tours-operations-consolidate": `
+                <h4>All-in-One Platform, Reduced Costs</h4>
+                <p>Zaui consolidates multiple essential tools—CRM, POS, OTA manager, and more—into one powerful platform. This eliminates the need for fragmented, disparate software systems, which reduces your software spend and simplifies your tech stack. It's an all-in-one solution that provides a single source of truth for your entire operation.</p>
+            `,
+            "tours-guest-online": `
+                <h4>Effortless Online Bookings</h4>
+                <p>By shifting up to **50% of your bookings online**, Zaui makes it incredibly convenient for your guests to book and manage their adventures. Our intuitive, mobile-first booking engine is available 24/7, reducing the administrative burden of phone inquiries and ensuring your tours are always accessible.</p>
+            `,
+            "tours-guest-reviews": `
+                <h4>Boost Your Reputation with Reviews</h4>
+                <p>Zaui’s automated follow-up communication system is designed to drive a massive increase in guest reviews, often by as much as **10x**. For Boreal, this means a stronger online reputation, more social proof, and a powerful feedback loop to continuously improve your tour offerings and attract new guests.</p>
+            `,
+            "tours-guest-sell-24-7": `
+                <h4>Your Business Never Sleeps</h4>
+                <p>With Zaui, your booking system is always-on, allowing you to **sell tours 24/7, even while you sleep**. This is especially beneficial for international travelers booking across different time zones, ensuring you never miss a booking opportunity. Your sales team and front desk staff are no longer the bottleneck to your revenue stream.</p>
+            `,
+            "tours-guest-fewer-abandoned": `
+                <h4>Convert More Browsers into Buyers</h4>
+                <p>Zaui's user-friendly and streamlined checkout process is designed to minimize friction and reduce abandoned carts. This directly impacts Boreal's tour conversion rates and revenue, ensuring that more people who start a booking complete it. The result is a more efficient sales funnel and more confirmed tour reservations.</p>
+            `,
+            "tours-guest-repeat": `
+                <h4>Build Guest Loyalty</h4>
+                <p>By providing a seamless booking experience, proactive communication, and an efficient operation, Zaui helps Boreal earn more **5-star reviews and repeat business**. A happy guest is a loyal guest, and Zaui gives you the tools to delight customers at every touchpoint, strengthening your brand's reputation and long-term value.</p>
+            `,
+            // Partnership Benefits
+            "benefit-guest-safety": `
+                <h4>Enhance Guest Safety with Zaui's Platform</h4>
+                <p>Zaui’s system is designed with safety and compliance in mind. For a company like Boreal, this means:</p>
+                <ul>
+                    <li><strong>Digital Manifests:</strong> Real-time, accurate passenger lists accessible to crew and guides on mobile devices. This is crucial for emergency situations and headcount verification on ferries and buses.</li>
+                    <li><strong>Waiver Management:</strong> For tours and activities, Zaui’s integrated digital waiver system ensures every participant has signed necessary documentation, reducing legal risk and streamlining on-site processes.</li>
+                    <li><strong>Proactive Communication:</strong> Automated alerts and SMS messages can be sent to all passengers in case of delays, route changes, or other unforeseen circumstances, keeping everyone informed and safe.</li>
+                </ul>
+            `,
+            "benefit-fleet-management": `
+                <h4>Optimize Fleet Management</h4>
+                <p>For Boreal's extensive fleet of buses and ferries, Zaui provides powerful tools to optimize resource allocation and maintenance. The platform allows you to:</p>
+                <ul>
+                    <li><strong>Centralized Scheduling:</strong> Manage all vehicles and routes from one dashboard, preventing scheduling conflicts and ensuring optimal utilization of your assets.</li>
+                    <li><strong>Real-Time Tracking:</strong> Integrate with vehicle tracking systems to have a real-time overview of your fleet, providing accurate updates to passengers and operational staff.</li>
+                    <li><strong>Resource Constraints:</strong> Define specific resource constraints for each service, such as vehicle capacity or required certifications for drivers, ensuring every trip is properly staffed and equipped.</li>
+                </ul>
+            `,
+            "benefit-staff-scheduling": `
+                <h4>Streamline Staff Scheduling</h4>
+                <p>Efficient staff management is critical for Boreal's operations. Zaui simplifies complex scheduling with features that allow you to:</p>
+                <ul>
+                    <li><strong>Automated Assignments:</strong> Automatically assign staff to tours and routes based on availability, skills, and certifications.</li>
+                    <li><strong>Mobile Access:</strong> Empower your team with a mobile app to view their schedules, clock in/out, and access trip details on the go, reducing administrative calls.</li>
+                    <li><strong>Overtime and Cost Control:</strong> Gain a clear overview of staff hours and labor costs, helping you manage budgets and avoid unnecessary overtime.</li>
+                </ul>
+            `
         };
 
-        const transportationImpactPrompts = {
-            'overall-experience': "Explain the significance of Zaui's 25 years of experience (since 1999, working with thousands of operators) for a large transport company like Boreal, highlighting how this longevity and experience translate into benefits such as stability, refined features, and deep industry understanding. What does this mean for Boreal?",
-            'overall-growth': "Explain the significance of Zaui's average client growth of 14% year-over-year for a company like Boreal, detailing what this consistent growth implies for their potential in terms of scalability and market expansion. What does this mean for Boreal?",
-            'revenue-275-lifetime': "Explain the significance of long-term Zaui users scaling their business by 275% since adoption, and how this long-term growth potential applies to Boreal, emphasizing sustained competitive advantage. What does this mean for Boreal?",
-            'revenue-20-peak': "Explain how Zaui's dynamic pricing can lead to a 20% revenue increase in peak season for Boreal, focusing on optimizing high-demand periods and strategically influencing passenger flow across their diverse transport services. What does this mean for Boreal?",
-            'channels-30-agents': "Explain how Zaui's agent portal can drive 30% more indirect bookings for Boreal from hotels, affiliates, and concierges, expanding their sales network efficiently. What does this mean for Boreal?",
-            'channels-global-reach': "Explain how Zaui provides global reach with integrations like Viator, Expedia, and Google Things to Do, and how this benefits Boreal in reaching international passengers without high commissions. What does this mean for Boreal?",
-            'channels-no-overbookings': "Explain how Zaui's real-time inventory sync across all channels (direct, OTA, agent) eliminates overbookings, ensuring critical accuracy and reliability for Boreal's high-frequency operations. What does this mean for Boreal?",
-            'channels-track-roi': "Explain how Zaui's unique affiliate links and commission tracking provide full transparency on partner ROI, allowing Boreal to optimize its reseller relationships and marketing spend. What does this mean for Boreal?",
-            'channels-multiple-brands': "Explain how Zaui allows selling under multiple brands or locations from one system and its relevance for Boreal's diverse services (e.g., bus routes, ferry services, tourist coaches) and potential future expansion. What does this mean for Boreal?",
-            'operations-75-workload': "Explain how Zaui automates bookings, confirmations, payments, and communications to cut office workload by 75% and the potential impact on Boreal's administrative efficiency. What does this mean for Boreal?",
-            'operations-grow-without-staff': "Explain how Zaui enables growing bookings without growing staff and how this scalability benefits Boreal's expanding passenger volume. What does this mean for Boreal?",
-            'operations-speed-checkin': "Explain how Zaui's mobile apps and QR ticket scanning speed up boarding and check-in, and how this improves Boreal's operational flow, especially at busy bus and ferry terminals. What does this mean for Boreal?",
-            'operations-consolidate-tools': "Explain how Zaui consolidates CRM, POS, OTA manager, and more into one unified platform, and the financial and operational benefits of this system consolidation for Boreal. What does this mean for Boreal?",
-            'guest-50-online': "Explain how Zaui can help Boreal shift up to 50% of its bookings online, enhancing convenience for passengers and significantly reducing phone-based administrative tasks. What does this mean for Boreal?",
-            'guest-10x-reviews': "Explain how Zaui's automated review requests can drive a massive increase in guest reviews (10x more), enhancing Boreal's online reputation and attracting new passengers. What does this mean for Boreal?",
-            'guest-sell-24-7': "Explain the benefit of Zaui's always-on booking capability (sell 24/7, even while you sleep) for Boreal, particularly for international travelers and convenience. What does this mean for Boreal?",
-            'guest-fewer-abandoned': "Explain how Zaui's user-friendly checkout leads to fewer abandoned carts and more confirmed bookings, directly impacting Boreal's conversion rates and revenue. What does this mean for Boreal?",
-            'guest-5-star-repeat': "Explain how Zaui helps Boreal earn more 5-star reviews and repeat business through smooth operations and great communication, and its long-term value for Boreal's brand loyalty. What does this mean for Boreal?",
-        };
-        
-        const API_MODEL = "gemini-2.5-flash-preview-05-20";
-
-        async function getAIExplanation(promptText) {
-            showLoading(); // Show full-page loading animation
-
-            // Exponential backoff retry logic
-            const maxRetries = 5;
-            const initialDelay = 1000; // 1 second
-            let retries = 0;
-
-            const makeApiCall = async (delay) => {
-                try {
-                    let chatHistory = [];
-                    chatHistory.push({ role: "user", parts: [{ text: promptText }] });
-                    const payload = { contents: chatHistory };
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${API_MODEL}:generateContent?key=${API_KEY}`;
-                    
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (response.status === 429) {
-                        // Too many requests, retry
-                        if (retries < maxRetries) {
-                            retries++;
-                            const newDelay = delay * 2;
-                            console.log(`Retrying API call with delay ${newDelay}ms...`);
-                            await new Promise(res => setTimeout(res, newDelay));
-                            return await makeApiCall(newDelay);
-                        } else {
-                            throw new Error("Maximum retries exceeded due to rate limiting.");
-                        }
-                    }
-
-                    const result = await response.json();
-                    
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        const rawText = result.candidates[0].content.parts[0].text;
-                        
-                        let finalContent = '<div class="modal-body">';
-                        
-                        // Split the response into lines and process markdown
-                        const lines = rawText.split('\n');
-                        let isList = false;
-
-                        lines.forEach(line => {
-                            const trimmedLine = line.trim();
-                            if (!trimmedLine) {
-                                // Close list if it was open
-                                if (isList) {
-                                    finalContent += '</ul>';
-                                    isList = false;
-                                }
-                                return;
-                            }
-
-                            // Handle headings
-                            if (trimmedLine.startsWith('#### ')) {
-                                if (isList) { finalContent += '</ul>'; isList = false; }
-                                finalContent += `<h4>${trimmedLine.substring(4)}</h4>`;
-                            } else if (trimmedLine.startsWith('### ')) {
-                                if (isList) { finalContent += '</ul>'; isList = false; }
-                                finalContent += `<h3>${trimmedLine.substring(3)}</h3>`;
-                            } else if (trimmedLine.startsWith('## ')) {
-                                if (isList) { finalContent += '</ul>'; isList = false; }
-                                finalContent += `<h2>${trimmedLine.substring(2)}</h2>`;
-                            } else if (trimmedLine.startsWith('# ')) {
-                                if (isList) { finalContent += '</ul>'; isList = false; }
-                                finalContent += `<h1>${trimmedLine.substring(1)}</h1>`;
-                            }
-                            // Handle lists
-                            else if (trimmedLine.startsWith('* ') || trimmedLine.startsWith('• ')) {
-                                if (!isList) {
-                                    finalContent += '<ul>';
-                                    isList = true;
-                                }
-                                finalContent += `<li>${trimmedLine.substring(2)}</li>`;
-                            }
-                            // Handle bold text within paragraphs
-                            else {
-                                if (isList) { finalContent += '</ul>'; isList = false; }
-                                let paragraph = trimmedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                                finalContent += `<p>${paragraph}</p>`;
-                            }
-                        });
-                        
-                        // Close any remaining open list tag
-                        if (isList) {
-                            finalContent += '</ul>';
-                        }
-
-                        finalContent += '</div>';
-
-                        modalText.innerHTML = finalContent; // Set innerHTML to modalText
-                        copyInsightsBtn.onclick = () => copyToClipboard(modalText.innerText); // Copy content from modalText
-                        copyInsightsBtn.classList.remove('hidden'); // Show copy button
-                        modalLoadingSpinner.classList.add('hidden'); // Hide modal's internal spinner
-                        return finalContent;
-                    } else {
-                        throw new Error("AI response structure unexpected.");
-                    }
-                } catch (error) {
-                    console.error("Error calling Gemini API:", error);
-                    modalText.innerHTML = "<p class='text-red-500'>Failed to generate insight. Please try again.</p>"; // Set text content for error
-                    modalLoadingSpinner.classList.add('hidden'); // Hide modal's internal spinner
-                    return "<p class='text-red-500'>Failed to generate insight. Please try again.</p>";
-                } finally {
-                    hideLoading(); // Hide full-page bus loading animation
-                }
-            };
-            return makeApiCall(initialDelay);
-        }
-
-        // Event listeners for tour view
-        document.getElementById('tours-view').addEventListener('click', (event) => {
-            if (event.target.closest('.impact-tile')) {
-                const tile = event.target.closest('.impact-tile');
-                const impactType = tile.dataset.impactType;
+        // Event listener for all KPI tiles
+        document.querySelectorAll('.impact-tile').forEach(tile => {
+            tile.addEventListener('click', () => {
+                const insightId = tile.dataset.insightId;
                 const value = tile.dataset.value;
                 const description = tile.dataset.description;
-                
-                showInsightModal(`Insight: ${value} ${description}`);
-                
-                const initialPrompt = tourImpactPrompts[impactType];
-                if (initialPrompt) {
-                    getAIExplanation(initialPrompt);
-                } else {
-                    hideLoading();
-                    modalText.innerHTML = "<p class='text-red-500'>No AI prompt found for this tile. Please try a different one.</p>";
-                    copyInsightsBtn.classList.add('hidden');
+                const title = `Insight: ${value} ${description}`;
+                const insightText = insights[insightId];
+                if (insightText) {
+                    showInsightModal(title, insightText);
                 }
-            } else if (event.target.closest('.generate-insights-btn-tours')) {
-                const button = event.target.closest('.generate-insights-btn-tours');
-                const title = button.dataset.title;
-                const snippet = button.dataset.snippet;
-
-                showInsightModal(`AI Insight: ${title}`);
-                const prompt = `Provide an AI-generated insight tailored for a tour and activity operator based on the following case study snippet: "${snippet}". Explain how a tour operator can apply these findings to their business.`;
-                getAIExplanation(prompt);
-
-            } else if (event.target.closest('.summarize-blog-btn-tours')) {
-                const button = event.target.closest('.summarize-blog-btn-tours');
-                const title = button.dataset.title;
-                const snippet = button.dataset.snippet;
-
-                showInsightModal(`AI Summary for: ${title}`);
-                const prompt = `Summarize the following blog post for a tour and activity company, highlighting key takeaways and how they can apply the information to their business: "${title}" - "${snippet}"`;
-                getAIExplanation(prompt);
-            }
-        });
-        
-        // Event listeners for transportation view
-        document.getElementById('transportation-view').addEventListener('click', (event) => {
-            if (event.target.closest('.impact-tile')) {
-                const tile = event.target.closest('.impact-tile');
-                const impactType = tile.dataset.impactType;
-                const value = tile.dataset.value;
-                const description = tile.dataset.description;
-                
-                showInsightModal(`Insight: ${value} ${description}`);
-                
-                const initialPrompt = transportationImpactPrompts[impactType];
-                if (initialPrompt) {
-                    getAIExplanation(initialPrompt);
-                } else {
-                    hideLoading();
-                    modalText.innerHTML = "<p class='text-red-500'>No AI prompt found for this tile. Please try a different one.</p>";
-                    copyInsightsBtn.classList.add('hidden');
-                }
-            } else if (event.target.closest('.generate-insights-btn-transportation')) {
-                const button = event.target.closest('.generate-insights-btn-transportation');
-                const title = button.dataset.title;
-                const snippet = button.dataset.snippet;
-
-                showInsightModal(`AI Insight: ${title}`);
-                const prompt = `Provide an AI-generated insight tailored for a transport operator like Boreal based on the following case study snippet: "${snippet}". Explain how Boreal can apply these findings to their business.`;
-                getAIExplanation(prompt);
-
-            } else if (event.target.closest('.summarize-blog-btn-transportation')) {
-                const button = event.target.closest('.summarize-blog-btn-transportation');
-                const title = button.dataset.title;
-                const snippet = button.dataset.snippet;
-
-                showInsightModal(`AI Summary for: ${title}`);
-                const prompt = `Summarize the following blog post for a transportation company like Boreal, highlighting key takeaways and how they can apply the information to their business: "${title}" - "${snippet}"`;
-                getAIExplanation(prompt);
-            }
+            });
         });
 
-        document.getElementById('revenueInsightBtn-tours').addEventListener('click', async () => {
-            showInsightModal(`Revenue Insights for Tour Operators`); // Show modal with title
-            const prompt = "Explain how Zaui's revenue-driving features specifically benefit a tour and activity company, covering dynamic pricing, channel expansion, and upsells. What does this mean for a tour operator? Structure your response with:\n\nRevenue Growth Pillars:\n[1-2 sentences]\n\nZaui's Revenue Tools:\n* [Bullet point 1]\n* [Bullet point 2]\n* [Bullet point 3]\n* [Bullet point 4]";
-            await getAIExplanation(prompt);
-        });
-
-        document.getElementById('efficiencyInsightBtn-tours').addEventListener('click', async () => {
-            showInsightModal(`Efficiency Insights for Tour Operators`); // Show modal with title
-            const prompt = "Detail how Zaui's operational efficiency features can transform a tour and activity company's daily operations, including automation, staff scheduling, and check-in improvements. What does this mean for a tour operator? Structure your response with:\n\nOperational Transformation:\n[1-2 sentences]\n\nEfficiency Drivers:\n* [Bullet point 1]\n* [Bullet point 2]\n* [Bullet point 3]\n* [Bullet point 4]";
-            await getAIExplanation(prompt);
-        });
-
-        document.getElementById('cxInsightBtn-tours').addEventListener('click', async () => {
-            showInsightModal(`Customer Experience Insights for Tour Operators`); // Show modal with title
-            const prompt = "Describe how Zaui enhances the customer experience for guests using a tour and activity service, focusing on self-serve booking, communication, and loyalty. What does this mean for a tour operator? Structure your response with:\n\nElevating Guest Journeys:\n[1-2 sentences]\n\nCustomer-Centric Features:\n* [Bullet point 1]\n* [Bullet point 2]\n* [Bullet point 3]\n* [Bullet point 4]";
-            await getAIExplanation(prompt);
-        });
-        
-        document.getElementById('revenueInsightBtn-transportation').addEventListener('click', async () => {
-            showInsightModal(`Revenue Insights for Transportation`); // Show modal with title
-            const prompt = "Explain how Zaui's revenue-driving features specifically benefit a large transport company like Boreal, covering dynamic pricing, channel expansion, and upsells. What does this mean for Boreal? Structure your response with:\n\nRevenue Growth Pillars:\n[1-2 sentences]\n\nZaui's Revenue Tools:\n* [Bullet point 1]\n* [Bullet point 2]\n* [Bullet point 3]\n* [Bullet point 4]";
-            await getAIExplanation(prompt);
-        });
-        document.getElementById('efficiencyInsightBtn-transportation').addEventListener('click', async () => {
-            showInsightModal(`Efficiency Insights for Transportation`); // Show modal with title
-            const prompt = "Detail how Zaui's operational efficiency features can transform a large transport company like Boreal's daily operations, including automation, scheduling, and check-in improvements. What does this mean for Boreal? Structure your response with:\n\nOperational Transformation:\n[1-2 sentences]\n\nEfficiency Drivers:\n* [Bullet point 1]\n* [Bullet point 2]\n* [Bullet point 3]\n* [Bullet point 4]";
-            await getAIExplanation(prompt);
-        });
-        document.getElementById('cxInsightBtn-transportation').addEventListener('click', async () => {
-            showInsightModal(`Customer Experience Insights for Transportation`); // Show modal with title
-            const prompt = "Describe how Zaui enhances the customer experience for millions of passengers using a service like Boreal, focusing on self-serve booking, communication, and loyalty. What does this mean for Boreal? Structure your response with:\n\nElevating Guest Journeys:\n[1-2 sentences]\n\nCustomer-Centric Features:\n* [Bullet point 1]\n* [Bullet point 2]\n* [Bullet point 3]\n* [Bullet point 4]";
-            await getAIExplanation(prompt);
-        });
-
-        // Generic Partnership Benefit Generator
-        document.getElementById('generateBenefitBtn').addEventListener('click', async () => {
-            const benefitAspectInput = document.getElementById('benefitAspectInput');
-            const generatedBenefitOutput = document.getElementById('generatedBenefitOutput');
-            const benefitText = document.getElementById('benefitText');
-            const benefitLoadingSpinner = document.getElementById('benefitLoadingSpinner');
-            const generateBenefitBtn = document.getElementById('generateBenefitBtn');
-            const copyBenefitBtn = document.getElementById('copyBenefitBtn');
-
-            const aspect = benefitAspectInput.value.trim();
-            if (!aspect) {
-                showNotification('Please enter a business aspect to generate a benefit insight.');
-                return;
-            }
-
-            generatedBenefitOutput.classList.add('hidden'); // Hide previous output
-            benefitText.textContent = ''; // Clear previous text
-            benefitLoadingSpinner.classList.remove('hidden'); // Show spinner
-            generateBenefitBtn.disabled = true; // Disable button
-
-            const currentView = document.getElementById('tours-view').classList.contains('active') ? 'tour and activity' : 'transportation';
-
-            const prompt = `Explain how the partnership with Zaui specifically benefits "${aspect}" in the ${currentView} industry for a company like Boreal. Be concise and highlight technological advantages. What does this mean for a company like Boreal?`;
-
-            try {
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-                const payload = { contents: chatHistory };
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${API_MODEL}:generateContent?key=${API_KEY}`;
-                
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+        // Event listeners for AI Insight buttons (Revenue, Efficiency, CX)
+        document.querySelectorAll('.cta-button').forEach(button => {
+            const insightId = button.dataset.insightId;
+            if (insights[insightId]) {
+                button.addEventListener('click', () => {
+                    const title = button.id.includes('revenue') ? 'Revenue Insights' :
+                                  button.id.includes('efficiency') ? 'Efficiency Insights' :
+                                  'Customer Experience Insights';
+                    showInsightModal(title, insights[insightId]);
                 });
-
-                const result = await response.json();
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    benefitText.textContent = text;
-                    generatedBenefitOutput.classList.remove('hidden');
-                    copyBenefitBtn.onclick = () => copyToClipboard(text);
-                } else {
-                    benefitText.textContent = 'Failed to generate benefit insight. Please try again.';
-                    generatedBenefitOutput.classList.remove('hidden');
-                }
-            } catch (error) {
-                console.error('Error generating benefit:', error);
-                benefitText.textContent = 'An error occurred while generating the benefit insight. Please try again later.';
-                generatedBenefitOutput.classList.remove('hidden');
-            } finally {
-                benefitLoadingSpinner.classList.add('hidden');
-                generateBenefitBtn.disabled = false;
             }
+        });
+        
+        // Event listeners for all blog summary buttons
+        document.querySelectorAll('.summarize-blog-btn').forEach(btn => {
+            const insightId = btn.dataset.insightId;
+            if (insights[insightId]) {
+                btn.addEventListener('click', () => {
+                    const title = `AI Summary for: ${btn.dataset.title}`;
+                    showInsightModal(title, insights[insightId]);
+                });
+            }
+        });
+        
+        // Generic Partnership Benefit Generator
+        document.querySelectorAll('.generate-benefit-btn').forEach(button => {
+            const insightId = button.dataset.insightId;
+            if (insights[insightId]) {
+                button.addEventListener('click', () => {
+                    const title = `Insight on: ${button.dataset.aspect}`;
+                    const generatedBenefitOutput = document.getElementById('generatedBenefitOutput');
+                    const benefitText = document.getElementById('benefitText');
+                    const copyBenefitBtn = document.getElementById('copyBenefitBtn');
+
+                    const text = insights[insightId];
+                    benefitText.innerHTML = text;
+                    generatedBenefitOutput.classList.remove('hidden');
+                    copyBenefitBtn.onclick = () => copyToClipboard(benefitText.innerText);
+                });
+            }
+        });
+
+        // Clickable "What You Can Find on This Page" boxes for scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
         
     </script>
